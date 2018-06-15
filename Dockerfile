@@ -2,8 +2,7 @@
 FROM php:5-apache
 #RUN apt-get update && apt-get -y install apache2 libapache2-mod-php php-mysql supervisor
 RUN apt-get update
-RUN apt-get -y install vim net-tools supervisor libmysqlclient-dev apache2-dev
-RUN apt-get -y install supervisor libmysqlclient-dev apache2-dev
+RUN apt-get -y install vim net-tools supervisor default-libmysqlclient-dev apache2-dev
 ADD usr/src /usr/src
 WORKDIR /usr/src/mod_auth_cookie_mysql2_1.0
 RUN make && make install
