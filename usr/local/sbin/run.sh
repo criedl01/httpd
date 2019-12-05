@@ -9,6 +9,9 @@ nodaemon= true
 [program:apache2]
 command=apache2-foreground
 
+[program:cron]
+command=cron -flL 15
+
 EOF
 
 [ -x /usr/local/sbin/extra/startup ] && /usr/local/sbin/extra/startup
