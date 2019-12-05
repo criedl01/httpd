@@ -16,4 +16,4 @@ EOF
 
 [ -x /usr/local/sbin/extra/startup ] && /usr/local/sbin/extra/startup
 
-exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+exec /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
