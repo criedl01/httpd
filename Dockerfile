@@ -5,7 +5,7 @@ ADD usr/src /usr/src
 WORKDIR /usr/src/mod_auth_cookie_mysql2_1.0
 RUN make && make install
 RUN apt-get -y remove apache2-dev && apt-get -y autoremove \
- && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+ && docker-php-ext-configure gd \
  && docker-php-ext-install exif gd pdo_mysql mysqli zip
 WORKDIR /
 COPY usr/local/sbin /usr/local/sbin
